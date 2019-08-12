@@ -16,12 +16,12 @@ How to play: <br/>
 **Seed**: Randomly places a alive or dead state in each cell. <br>
 **Grid Size**: Choose the size of the grid you'd like. <br>
 
-**Clicking on a cell when pause will change the state to the opposite of what it already is. (ex. alive turns to dead, dead turns to alive). <br>
-**
+Clicking on a cell when pause will change the state to the opposite of what it already is. (ex. alive turns to dead, dead turns to alive). <br>
+
 **Dead: Grey cell <br>
 Alive: Green cell**
 
-[Live Site](www.google.com)
+[Live Site](https://stephenli305.github.io/GameOfLife/)
 
 Screenshot
 ![](/gameoflife.png)
