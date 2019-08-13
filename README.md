@@ -23,5 +23,7 @@ Alive: Green cell**
 
 [Live Site](https://stephenli305.github.io/GameOfLife/)
 
-Screenshot
 ![](/gameoflife.png)
+
+Built with React.
+
