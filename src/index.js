@@ -2,114 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-import { ButtonToolbar,Button, Dropdown, DropdownButton   } from 'react-bootstrap';
+import Buttons from './buttons';
+import Grid from './grid';
+import Footer from './footer';
 
-class Box extends React.Component {
-    selectBox = () => {
-        this.props.selectBox(this.props.row, this.props.col)
-    }
-
-    render(){
-        return(
-            <div
-            className = {this.props.boxClass}
-            id = {this.props.id}
-            onClick = {this.selectBox}
-            >
-            </div>
-        )
-    }
-}
-
-class Grid extends React.Component {
-    render(){
-        const width = (this.props.cols * 14);
-        var rowsArr = [];
-
-        var boxClass = "";
-        for(var i = 0; i < this.props.rows; i++){
-            for(var j = 0; j < this.props.cols; j++){
-                let boxId = i + " " + j;
-                boxClass = this.props.gridFull[i][j] ? "box on" : "box off";
-                rowsArr.push(
-                    <Box
-                    boxClass = {boxClass}
-                    key = {boxId}
-                    boxId = {boxId}
-                    row = {i}
-                    col = {j}
-                    selectBox = {this.props.selectBox}
-                    />
-                );
-            }
-        }
-        return (
-          <div className="grid" style={{width:width}}>
-              {rowsArr}
-          </div>
-        );
-    }
-}
-
-class Buttons extends React.Component {
-    handleSelect = (evt) => {
-        this.props.gridSize(evt);
-    }
-    render(){
-        return (
-          <div className="center">
-            <ButtonToolbar>
-              <Button
-                variant="outline-success"
-                className="btn btn-default"
-                onClick={this.props.playButton}
-              >
-                Play
-              </Button>
-              <Button
-                className="btn btn-default"
-                onClick={this.props.pauseButton}
-              >
-                Pause
-              </Button>
-              <Button
-                className="btn btn-default"
-                onClick={this.props.clear}
-              >
-                Clear
-              </Button>
-              <Button
-                className="btn btn-default"
-                onClick={this.props.slow}
-              >
-                Slow
-              </Button>
-              <Button
-                className="btn btn-default"
-                onClick={this.props.fast}
-              >
-                Fast
-              </Button>
-              <Button
-                className="btn btn-default"
-                onClick={this.props.seed}
-              >
-                Seed
-              </Button>
-              <DropdownButton
-                title="Grid Size"
-                id="size-menu"
-                onSelect={this.handleSelect}
-              >
-                <Dropdown.Item eventKey="1">20x10</Dropdown.Item>
-                <Dropdown.Item eventKey="2">50x30</Dropdown.Item>
-                <Dropdown.Item eventKey="3">70x50</Dropdown.Item>
-              </DropdownButton>
-            </ButtonToolbar>
-          </div>
-        );
-    }
-}
 
 class Main extends React.Component {
     constructor(){
@@ -221,7 +117,6 @@ class Main extends React.Component {
 
     componentDidMount(){
         this.seed();
-        // this.playButton();
     }
 
     render(){
@@ -244,6 +139,7 @@ class Main extends React.Component {
                 selectBox = {this.selectBox}
                 />
                 <h2>Generation: {this.state.generation}</h2>
+                <Footer />
             </div>
         );
     }
