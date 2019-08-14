@@ -5,6 +5,7 @@ import './index.css';
 import Buttons from './buttons';
 import Grid from './grid';
 import Footer from './footer';
+import Modal from './modal';
 
 
 class Main extends React.Component {
@@ -32,7 +33,6 @@ class Main extends React.Component {
     }
 
     seed = () => {
-        console.log("seed")
         let gridCopy = arrayClone(this.state.gridFull);
         for(let i = 0; i < this.rows; i++){
             for(let j = 0; j < this.cols; j++){
@@ -99,7 +99,6 @@ class Main extends React.Component {
                 if (i > 0) if (g[i - 1][j]) count++;
                 if (i > 0 && j > 0) if (g[i - 1][j - 1]) count++;
                 if (i > 0 && j < this.cols - 1) if (g[i - 1][j + 1]) count++;
-                console.log("line 106")
                 if (j < this.cols - 1) if (g[i][j + 1]) count++;
                 if (j > 0) if (g[i][j - 1]) count++;
                 if (i < this.rows - 1) if (g[i + 1][j]) count++;
@@ -122,6 +121,7 @@ class Main extends React.Component {
     render(){
         return(
             <div>
+                <Modal/>
                 <h1>The Game of Life</h1>
                 <Buttons
                 playButton = {this.playButton}
