@@ -17,7 +17,7 @@ const customStyles = {
         backgroundImage:'url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/squares.png)',
         color:'white',
         maxWidth:'900px',
-
+        borderRadius:'20px',
 
     }
 };
