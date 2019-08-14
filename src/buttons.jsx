@@ -16,37 +16,38 @@ class Buttons extends React.Component {
                         onClick={this.props.playButton}
                     >
                         Play
-              </Button>
+                    </Button>
                     <Button
                         className="btn btn-default"
                         onClick={this.props.pauseButton}
                     >
                         Pause
-              </Button>
+                    </Button>
                     <Button
                         className="btn btn-default"
                         onClick={this.props.clear}
                     >
                         Clear
-              </Button>
+                    </Button>
                     <Button
                         className="btn btn-default"
                         onClick={this.props.slow}
                     >
                         Slow
-              </Button>
+                    </Button>
                     <Button
                         className="btn btn-default"
                         onClick={this.props.fast}
                     >
                         Fast
-              </Button>
+                    </Button>
                     <Button
                         className="btn btn-default"
                         onClick={this.props.seed}
                     >
                         Seed
-              </Button>
+                    </Button>
+                    
                     <DropdownButton
                         title="Grid Size"
                         id="size-menu"

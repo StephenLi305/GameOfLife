@@ -122,22 +122,26 @@ class Main extends React.Component {
         return(
             <div>
                 <Modal/>
-                <h1>The Game of Life</h1>
+                
+                <h1>Conway's Game of Life</h1>
+
                 <Buttons
                 playButton = {this.playButton}
                 pauseButton = {this.pauseButton}
                 slow = {this.slow}
                 fast = {this.fast}
-                clear = {this.clear}
                 seed = {this.seed}
+                clear = {this.clear}
                 gridSize = {this.gridSize}
                 />
+                
                 <Grid
                 gridFull = {this.state.gridFull}
                 rows = {this.rows}
                 cols = {this.cols}
                 selectBox = {this.selectBox}
                 />
+                
                 <h2>Generation: {this.state.generation}</h2>
                 <Footer />
             </div>

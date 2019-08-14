@@ -12,8 +12,13 @@ const customStyles = {
         bottom: 'auto',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
-        "text-align": 'center',
-        width: '80%'
+        textAlign: 'center',
+        width: '80%',
+        backgroundImage:'url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/squares.png)',
+        color:'white',
+        maxWidth:'900px',
+
+
     }
 };
 
@@ -40,13 +45,23 @@ class ModalPop extends React.Component {
                 style={customStyles}
             >
                 <div>
-                    <div>
+                    <h5>
                         Conway's Game of Life
-                    </div>
+                    </h5>
                     <br></br>
-                    <div>
+                    
+                    <p>
                         The universe of the Game of Life is an infinite, two-dimensional orthogonal grid of square cells, each of which is in one of two possible states, alive or dead, (or populated and unpopulated, respectively). Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent. At each step in time, the following transitions occur:                   
-                    </div>
+                    </p>
+                    <br></br>
+
+                    <p>
+                        Any live cell with fewer than two live neighbours dies, as if by underpopulation. <br/>
+                        Any live cell with two or three live neighbours lives on to the next generation.<br/> 
+                        Any live cell with more than three live neighbours dies, as if by overpopulation.<br/> 
+                        Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.<br/> 
+                    </p>
+                    <br></br>
 
                 </div>
             </Modal>
