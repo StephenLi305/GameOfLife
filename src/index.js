@@ -66,6 +66,7 @@ class Main extends React.Component {
     }
 
     clear = () => {
+        clearInterval(this.intervalId);
         let grid = Array(this.rows).fill().map(() => Array(this.cols).fill(false));
         this.setState({
             gridFull: grid,
