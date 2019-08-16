@@ -43,6 +43,7 @@ class ModalPop extends React.Component {
                 isOpen={this.state.showModal}
                 onRequestClose={this.handleCloseModal}
                 style={customStyles}
+                ariaHideApp={false}
             >
                 <div>
                     <h5>
